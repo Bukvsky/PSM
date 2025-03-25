@@ -1,9 +1,11 @@
 import math
-
+pi = 3.141592653589
 liczba = input(f'''Wprowadz liczbe w stopniach lub radianach dodając na końcu stosowną literkę
     r - radiany(np 0.5236r)
     s - stopnie(np 90s)
     ''')
+
+
 
 def factorial(n):
     res = 1
@@ -32,7 +34,7 @@ def sinus(val):
     for i in range(1, 11):  # Iteracja po 10 wyrazach szeregu
         wyraz = wielomianTaylora(val, znak, potega)
         suma += wyraz
-        print(f"{i + 1:<10}{wyraz:<20.10f}{suma:<30.10f}{math.sin(val):<20.10f}{abs(suma - math.sin(val)):<20.10f}")
+        print(f"{i:<10}{wyraz:<20.10f}{suma:<30.10f}{math.sin(val):<20.10f}{abs(suma - math.sin(val)):<20.10f}")
 
         znak *= -1
         potega += 2
